@@ -75,7 +75,7 @@ function Post({ post }: Props) {
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
             content={post.body}
             serializers={{
-              // normal: (props: any) => <p className='my-5' {...props} />,
+              normal: (props: any) => <p className='my-5' {...props} />,
               h1: (props: any) => (
                 <h1 className='text-3xl font-bold my-5' {...props} />
               ),
@@ -85,14 +85,14 @@ function Post({ post }: Props) {
               h3: (props: any) => (
                 <h1 className='text-xl font-bold my-5' {...props} />
               ),
-              // h4: (props: any) => (
-              //   <h1 className='text-base font-bold my-5' {...props} />
-              // ),
-              // blockquote: ({ children }: any) => (
-              //   <blockquote className='p-4 italic border-l-4 bg-neutral-100 text-neutral-600 border-neutral-500 quote my-4'>
-              //     {children}
-              //   </blockquote>
-              // ),
+              h4: (props: any) => (
+                <h1 className='text-base font-bold my-5' {...props} />
+              ),
+              blockquote: ({ children }: any) => (
+                <blockquote className='p-4 italic border-l-4 bg-neutral-100 text-neutral-600 border-neutral-500 quote my-4'>
+                  {children}
+                </blockquote>
+              ),
               li: ({ children }: any) => (
                 <li className='ml-4 list-disc'>{children}</li>
               ),
